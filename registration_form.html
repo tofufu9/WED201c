@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EVENT REGISTRATION FORM</h1>
+    <form action="">
+        <table>
+            <tr>
+            <td>Name</td>
+            <td><input type="fname" name="txtFName" id="txtFName" placeholder="First Name" required></td>
+            <td><input type="lname" name="txtLName" id="txtLName" placeholder="Last Name" required></td>
+        </tr>
+            <tr>
+                <td>Company</td>
+                <td><input size="10" type="company" name="txtCompany" id="txtCompany" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="txtEmail" id="txtEmail" required></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="areacode" name="areaCode" id="areaCode" placeholder="AreaCode" required></td>
+                <td><input type="number" name="txtPhone" id="txtPhone" placeholder="Phone Number" required></td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td><select name="subject" id="subject">
+                    <option value="" disabled selected>Choose Option</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="literature">Literature</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Are you an existing customer?</td>
+            </tr>
+            <tr>
+            <td>
+                <input type="radio" name="rdOpt" value="Yes" checked>Yes
+                <input type="radio" name="rdOpt" value="No">
+                <label for="rdOpt">No</label>
+            </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="REGISTER"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
