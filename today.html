@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+    function validate(){
+    us = document.frmRegister.txtUS;
+        if(us.value==""){
+        alert("username cannot be blank");
+        us.focus();
+        return false;
+        }
+
+        pwd = document.frmRegister.txtPWD;
+        if(pwd.value==""){
+        alert("password cannot be blank");
+        pwd.focus();
+        return false;
+        }
+        if(pwd.value.length <6 || pwd.value.length > 12){
+            alert("Password must be from 6-12 words!");
+            pwd.focus();
+            return false;
+        }
+        confirmpwd=document.frmRegister.txtCfm;
+        if(confirmpwd.value != pwd.value){
+            alert("The confirm password must be match with the password above!");
+            confirmpwd.focus();
+            return false;
+        }
+        fname=document.frmRegister.txtFullName;
+        if(fname.value==""){
+            alert("The fullname cannot be blank");
+            fname.focus();
+            return false;
+        }
+        dob=document.frmRegister.txtDoB;
+        if(dob.value==""){
+            alert("The DoB cannot be blank");
+            dob.focus();
+            return false;
+        }
+        gender=document.frmRegister.radGender;
+        if(gender[0].checked==false && gender[1].checked=false){
+            alert("Gender must be select!");
+            gender[0].focus();
+            return false;
+        }
+        mail=document.frmRegister.txtEmail;
+        regex = /^[a-zA-Z]\w+@[a-zA-Z]\w+(\.[a-zA-Z]\w+)+$/;
+        if(regex.test(email.value)==false){
+            alert("Email is invalid");
+            mail.focus();
+            return false;
+        }
+        return true;
+    }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frmRegister" id="frmRegister" onsubmit="validate()">
+      US: <input type="text" name="txtUS" id="txtUS">
+      <br>
+      PWD: <input type="password" name="txtPWD" id="txtPWD">
+      <br>
+      Confirm: <input type="password" name="txtCfm" id="txtCfm">
+      <br>
+      Fullname: <input type="text" name="txtFullname" id="txtFullname">
+      <br>
+      DoB: <input type="date" name="txtDoB" id="txtDoB">
+      <br>
+      Gender: <input type="radio" name="radGender" id=""> Male <input type="radio" name="radGender" id=""> Female
+      <br>
+      Email: <input type="text" name="txtEmail" id="txtEmail">
+      <br>
+      Address: <textarea name="txtAdd" id="txtAdd" cols="30" rows="10"></textarea>
+      <input type="submit" value="Register" name="txtSubmit">
+      <input type="reset" value="Submit"name="txtReset">
+    </form>
+</body>
+</html>
